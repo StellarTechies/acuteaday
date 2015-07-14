@@ -10,8 +10,21 @@
       </ul>
     </div>
   <% end %>
+  
+  <ul>
+    <li><%= f.label :name %></li>
+    <li><%= f.text_field :name %></li>
+    <li><%= f.label :email %></li>
+    <li><%= f.email_field :email %></li>
+    <li><%= f.label :password %></li>
+    <li><%= f.password_field :password %></li>
+    <li><%= f.label :password_confirmation %></li>
+    <li><%= f.password_field :password_confirmation %></li>
+    <li><%= f.label :bio %></li>
+    <li><%= f.text_area :bio %></li>
+  </ul>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Author" %>
   </div>
 <% end %>
