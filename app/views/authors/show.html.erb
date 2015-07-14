@@ -1,4 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+<ul>
+    <li><%= image_path @author.image %></li>
+    <li><%= @author.name %></li>
+    <li><%= @author.email %></li>
+    <li><%= @author.bio %></li>
+    <li>
+        <ul>
+           <% @posts.each do |post| %>
+                <li>
+                    <%= post.title %>
+                </li>
+                <li>
+                    <%= link_to post_path(post) %>
+                </li>
+            <% end %>
+        </ul>
+    </li>
+</ul>
+
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>

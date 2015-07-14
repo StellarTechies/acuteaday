@@ -10,6 +10,21 @@
       </ul>
     </div>
   <% end %>
+  
+  <ul>
+    <li><%= f.label :title %></li>
+    <li><%= f.text_field :title %></li>
+    <li><%= f.label :url %></li>
+    <li><%= f.text_field :url %></li>
+    <li><%= f.label :image %></li>
+    <li><%= f.text_field :image %></li>
+    <li><%= f.label :content %></li>
+    <li><%= f.text_area :content %></li>
+    <li><%= f.label :enabled %></li>
+    <li><%= f.radio_button :enabled, "enabled" %><%= f.radio_button :enabled, "disabled" %></li>
+    <li><%= f.label :author_id %></li>
+    <li><%= f.text_field :author_id %></li>
+  </ul>
 
   <div class="actions">
     <%= f.submit %>

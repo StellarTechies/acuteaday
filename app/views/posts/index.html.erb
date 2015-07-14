@@ -12,6 +12,13 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= post.title %></td>
+        <td><%= post.url %></td>
+        <td><%= image_path post.image %></td>
+        <td><%= post.content %></td>
+        <td><%= post.enabled %></td>
+        <td><%= post.author %></td>
+        <td><%= post.category %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
