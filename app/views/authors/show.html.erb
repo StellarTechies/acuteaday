@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<ul>
+    <li><%= image_path @author.image %></li>
+    <li><%= @author.name %></li>
+    <li><%= @author.email %></li>
+    <li><%= @author.bio %></li>
+</ul>
+
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
