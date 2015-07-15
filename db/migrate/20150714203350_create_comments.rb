@@ -1,9 +1,11 @@
 class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
-      t.string   :title
-      t.text     :content
-      t.string   :image
+      t.string :name
+      t.string :email
+      t.text :content
+      t.boolean :enabled
+      t.boolean :spam
       t.timestamps null: false
       t.references :post, index: true, foreign_key: true
     end
